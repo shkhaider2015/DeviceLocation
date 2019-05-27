@@ -1,4 +1,5 @@
 package com.example.devicelocation;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -137,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
      * Restoring values from saved instance state
      */
     private void restoreValuesFromBundle(Bundle savedInstanceState) {
-        if (savedInstanceState != null) {
+        if (savedInstanceState != null)
+        {
             if (savedInstanceState.containsKey("is_requesting_updates")) {
                 mRequestingLocationUpdates = savedInstanceState.getBoolean("is_requesting_updates");
             }
@@ -160,7 +162,8 @@ public class MainActivity extends AppCompatActivity {
      * and toggling the buttons
      */
     private void updateLocationUI() {
-        if (mCurrentLocation != null) {
+        if (mCurrentLocation != null)
+        {
             txtLocationResult.setText(
                     "Lat: " + mCurrentLocation.getLatitude() + ", " +
                             "Lng: " + mCurrentLocation.getLongitude()
